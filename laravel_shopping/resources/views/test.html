@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phạm vi dữ liệu Component Vue.js - Example 1 - Allaravel.com</title>
+</head>
+<body>
+    <template id="hello-template">
+        <h1>{{ message }} {{ userName }}</h1>
+    </template>
+    <div class="container" id="app">
+        <hello-component></hello-component>
+    </div>
+    <script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
+    <script type="text/javascript">
+        Vue.component('hello-component',{
+            data: function () {
+                return {
+                    message: 'Xin chào cau',
+                    userName:'cvc'
+                }
+            },
+            mounted:() => {
+                console.log('ffff');
+            },
+            template: '#hello-template'
+        })
+        new Vue({
+            el: '#app',
+            data: function () {
+                return {
+                    message: 'Xin chào cau',
+                    userName:'cvc'
+                }
+            },
+        });
+    </script>
+
+
+
+    <!-- <div id="app4">
+        <template v-if="show">
+            <h1 v-if="show">Chào mừng bạn đến với website toidicode.com</h1>
+            <p>Auhor: Vũ Thanh Tài</p>
+        </template>
+        <button type="button" @click="toggleTag">Toggle Tag</button>
+    </div>
+
+    <div id="app3">
+        <h1 :style="[colorValue, borderValue, paddingValue]">Chào mừng bạn đến với website toidicode.com</h1>
+    </div>
+<div id="app2">
+    <span>{{fullName}}</span>
+</div>
+
+    <div id="app1">
+        <h1 class="text-red">{{ convertToUpper }}</h1>
+    </div>
+
+<div id="app">
+    <form action="https://toidicode.com" @submit.prevent="showAlert">
+        <input type="text" name="name" placeholder="Nhập vào tên">
+        <input type="submit" value="Gửi">
+    </form>
+</div>
+
+<div id="app5">
+    <span>{{mess.toUpperCase()}}</span>
+    <h1>{{getSite()}}</h1>
+</div>
+
+      <script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
+      <script type="text/javascript">
+
+var app5=new Vue({
+    el:'#app5',
+    data:{
+        mess:'alo',
+    },
+    methods: {
+getSite:function(){
+    return 'sadas'
+}
+    }
+});
+
+var app = new Vue({
+            el: '#app',
+            methods: {
+                showAlert : function () {
+                    alert('bạn vừa click vào button');
+                }
+            }
+        });
+
+        var app1 = new Vue({
+            el: '#app1',
+            data: {
+                name: 'Vu Thanh Tai' //giá trị ban đầu.
+            },
+            computed : {
+                convertToUpper: {
+                    get : function () {
+                        return this.name.toUpperCase();
+                    },
+                    set: function (name) {
+                        this.name = name;
+                    }
+                }
+            }
+        });
+        //thiết lập lại giá trị
+        app1.convertToUpper = "Hoc Lap Trinh Online Toidicode.com";
+
+        var app2 = new Vue({
+            el: '#app2',
+            data: {
+                firstName: 'Vu Thanh',
+                lastName: 'Tai',
+            },
+            computed: {
+                fullName : function () {
+                    return this.firstName + ' ' + this.lastName;
+                }
+            }
+        });
+
+        var app3 = new Vue({
+            el: '#app3',
+            data: {
+                colorValue: {
+                    color : 'red'
+                },
+                borderValue: {
+                    //sanke_case
+                    'border-bottom' : '1px solid orange'
+                },
+                paddingValue: {
+                    //camelCase
+                    paddingBottom: '10px'
+                }
+            }
+        });
+
+        var app4 = new Vue({
+            el: '#app4',
+            data: {
+                show: true,
+            },
+            methods: {
+                toggleTag : function () {
+                    if (this.show == true ) {
+                        this.show = false;
+                    } else {
+                        this.show = true;
+                    }
+                }
+            }
+        });
+</script>  -->
+</body>
+</html>
